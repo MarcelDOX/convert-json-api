@@ -1,0 +1,31 @@
+{
+  "name": "convert-json",
+  "version": "1.0.0",
+  "description": "A simple Node.js application to clean fields from JSON",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "test": "jest --testPathPattern ./tests/"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-typescript": "^7.26.0",
+    "@jest/globals": "^29.7.0",
+    "@types/express": "^5.0.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.8.6",
+    "jest": "^29.7.0",
+    "nodemon": "3.1.7",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  },
+  "license": "MIT",
+  "author": "Marcel Dall'Oglio",
+  "dependencies": {
+    "express": "^4.21.1",
+    "express-body-parser-error-handler": "^1.0.7"
+  }
+}

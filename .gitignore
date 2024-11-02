@@ -1,0 +1,26 @@
+# Desconsiderar arquivos gerados
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Desconsiderar arquivos de cache
+.cache
+tmp
+*.log
+
+# Desconsiderar arquivos de configuração local
+.env
+.env.*
+
+# Desconsiderar arquivos de build
+dist/
+build/
+
+# Desconsiderar arquivos de IDEs
+.idea
+*.iml
+.vscode/
+
+# Desconsiderar arquivos gerados por ferramentas
+coverage/
+reports/
