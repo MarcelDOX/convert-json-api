@@ -1,4 +1,4 @@
-import express, { Request, Response } from 'express';
+import express, { Request, Response, NextFunction } from 'express';
 import bodyParser from 'body-parser'
 import JsonRoutes from './routes/JsonRoutes';
 import bodyParserErrorHandler from 'express-body-parser-error-handler';
@@ -9,8 +9,8 @@ app.use(bodyParser.json())
 
 app.use(JsonRoutes);
 
-app.use((req: Request, res: Response) => {
-    res.status(404);
+app.use((req: Request, res: Response, next: NextFunction) => {
+    res.status(404).json({ message: 'Rota não encontrada' });
 });
 
 app.use(bodyParserErrorHandler());
